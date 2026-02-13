@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Water-logging Complaint - MCD Delhi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            padding-bottom: 2rem;
+        }
+        
+        /* Top Navigation Bar */
+        .top-nav {
+            background: #1e3a8a;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .gov-branding {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .emblem {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 1.5rem;
+        }
+        
+        .gov-text {
+            line-height: 1.3;
+        }
+        
+        .gov-text .main {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .gov-text .sub {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+        
+        .back-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        .page-header {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            color: #1e293b;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-header p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Alert Box */
+        .alert-box {
+            background: #dcfce7;
+            border-left: 4px solid #16a34a;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+        
+        .alert-box h3 {
+            color: #15803d;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .alert-box ul {
+            margin-left: 1.5rem;
+            color: #166534;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Form Container */
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .section-title {
+            color: #1e3a8a;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .form-group label .required {
+            color: #dc2626;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* Ward Select */
+        .ward-select-wrapper {
+            position: relative;
+        }
+        
+        .ward-search {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .ward-options {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            display: none;
+            position: absolute;
+            width: 100%;
+            background: white;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .ward-option {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.2s;
+        }
+        
+        .ward-option:hover {
+            background: #f1f5f9;
+        }
+        
+        .ward-option.selected {
+            background: #eff6ff;
+            color: #1e3a8a;
+            font-weight: 500;
+        }
+        
+        .selected-ward {
+            display: none;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 4px;
+            color: #166534;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #059669;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background: #047857;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Success Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            padding: 2rem;
+            text-align: center;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #059669;
+            margin-bottom: 1rem;
+        }
+        
+        .complaint-id {
+            background: #f0fdf4;
+            border: 2px dashed #059669;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        
+        .complaint-id strong {
+            display: block;
+            color: #15803d;
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .modal-btn {
+            padding: 0.75rem 2rem;
+            background: #059669;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="gov-branding">
+            <div class="emblem">🇮🇳</div>
+            <div class="gov-text">
+                <div class="main">Government of NCT of Delhi</div>
+                <div class="sub">Municipal Corporation of Delhi</div>
+            </div>
+        </div>
+        <button class="back-btn" onclick="window.location.href='delhi_waterlog_landing.html'">← Back to Home</button>
+    </div>
+    
+    <!-- Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="page-header">
+            <h1>🌊 File Water-logging Complaint</h1>
+            <p>Report flooding incidents in your area to help us serve you better. Your complaint will be registered and action will be taken within 24-48 hours.</p>
+        </div>
+        
+        <!-- Alert Box -->
+        <div class="alert-box">
+            <h3>📋 Before You File a Complaint:</h3>
+            <ul>
+                <li>Ensure accurate contact information for follow-up</li>
+                <li>Note the exact location and time of flooding</li>
+                <li>Take photos/videos if possible (optional but helpful)</li>
+                <li>You will receive SMS/Email updates on your complaint status</li>
+            </ul>
+        </div>
+        
+        <!-- Form -->
+        <div class="form-container">
+            <form id="complaintForm">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3 class="section-title">👤 Personal Information</h3>
+                    
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="mobile" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" required placeholder="your.email@example.com">
+                    </div>
+                </div>
+                
+                <!-- Location Information -->
+                <div class="form-section">
+                    <h3 class="section-title">📍 Location Details</h3>
+                    
+                    <div class="form-group">
+                        <label>Complete Address <span class="required">*</span></label>
+                        <textarea id="address" required placeholder="House No., Street Name, Landmark, Area, Pin Code"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Select Ward <span class="required">*</span></label>
+                        <div class="ward-select-wrapper">
+                            <input type="text" class="ward-search" placeholder="Search for your ward..." oninput="searchWards()">
+                            <div class="ward-options" id="wardOptions"></div>
+                            <div class="selected-ward" id="selectedWardDisplay"></div>
+                        </div>
+                        <input type="hidden" id="selectedWard" required>
+                    </div>
+                </div>
+                
+                <!-- Complaint Details -->
+                <div class="form-section">
+                    <h3 class="section-title">📝 Complaint Details</h3>
+                    
+                    <div class="form-group">
+                        <label>Brief Description of Complaint <span class="required">*</span></label>
+                        <textarea id="complaintDescription" required placeholder="Describe the water-logging issue, depth of water, affected area, etc."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Alerts Preference</label>
+                        <select id="alerts">
+                            <option value="sms">SMS Only</option>
+                            <option value="email">Email Only</option>
+                            <option value="both" selected>Both SMS & Email</option>
+                            <option value="none">No Alerts</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">📤 Submit Complaint</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">✅</div>
+            <h2>Complaint Submitted Successfully!</h2>
+            <p>Thank you for reporting the water-logging issue. Your complaint has been registered.</p>
+            
+            <div class="complaint-id">
+                <div>Your Complaint ID:</div>
+                <strong id="complaintIdDisplay"></strong>
+            </div>
+            
+            <p style="color: #64748b; font-size: 0.9rem; margin-top: 1rem;">
+                📱 You will receive SMS and email confirmation shortly.<br>
+                ⏱️ Expected response time: 24-48 hours<br>
+                📊 Track your complaint status using the ID above
+            </p>
+            
+            <button class="modal-btn" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+    
+    <script>
+        // Ward data (first 50 wards as example)
+        const wards = [
+            "1 - NARELA", "2 - BANKNER", "3 - HOLAMBI KALAN", "4 - ALIPUR", "5 - BAKHTAWARPUR",
+            "6 - BURARI", "7 - KADIPUR", "8 - MUKUNDPUR", "9 - SANT NAGAR", "10 - JHARODA",
+            "11 - TIMARPUR", "12 - MALKA GANJ", "13 - MUKHERJEE NAGAR", "14 - DHIRPUR", "15 - ADARSH NAGAR",
+            "16 - AZADPUR", "17 - BHALSWA", "18 - JAHANGIR PURI", "19 - SARUP NAGAR", "20 - SAMAYPUR BADLI",
+            "21 - ROHINI-A", "22 - ROHINI-B", "23 - RITHALA", "24 - VIJAY VIHAR", "25 - BUDH VIHAR",
+            "26 - POOTH KALAN", "27 - BEGUMPUR", "28 - SHAHBARD DAIRY", "29 - POOTH KHURD", "30 - BAWANA",
+            "31 - NANGAL THAKRAN", "32 - KANJHAWALA", "33 - RANI KHERA", "34 - NANGLOI", "35 - MUNDKA",
+            "36 - NILOTHI", "37 - KIRARI", "38 - PREM NAGAR", "39 - MUBARKPUR", "40 - NITHARI",
+            "41 - AMAN VIHAR", "42 - MANGOL PURI", "43 - SULTANPURI-A", "44 - SULTANPURI-B", "45 - JAWALAPURI",
+            "46 - NANGLOI JAT", "47 - NIHAL VIHAR", "48 - GURU HARKISHAN NAGAR", "49 - MANGOLPURI-A", "50 - MANGOLPURI-B"
+        ];
+        
+        let selectedWard = null;
+        
+        function populateWards() {
+            const wardOptions = document.getElementById('wardOptions');
+            wardOptions.innerHTML = '';
+            
+            wards.forEach(ward => {
+                const option = document.createElement('div');
+                option.className = 'ward-option';
+                option.textContent = ward;
+                option.onclick = () => selectWard(ward);
+                wardOptions.appendChild(option);
+            });
+        }
+        
+        function searchWards() {
+            const searchTerm = document.querySelector('.ward-search').value.toLowerCase();
+            const wardOptions = document.getElementById('wardOptions');
+            const options = wardOptions.querySelectorAll('.ward-option');
+            
+            wardOptions.style.display = 'block';
+            
+            options.forEach(option => {
+                const text = option.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    option.style.display = 'block';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+        }
+        
+        function selectWard(ward) {
+            selectedWard = ward;
+            document.getElementById('selectedWard').value = ward;
+            document.getElementById('selectedWardDisplay').textContent = `Selected: ${ward}`;
+            document.getElementById('selectedWardDisplay').style.display = 'block';
+            document.getElementById('wardOptions').style.display = 'none';
+            document.querySelector('.ward-search').value = ward;
+        }
+        
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.remove('active');
+            document.getElementById('complaintForm').reset();
+            document.getElementById('selectedWardDisplay').style.display = 'none';
+            selectedWard = null;
+        }
+        
+        document.getElementById('complaintForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!selectedWard) {
+                alert('Please select a ward from the list');
+                return;
+            }
+            
+            const complaintId = 'WL' + Date.now().toString().slice(-8);
+            document.getElementById('complaintIdDisplay').textContent = complaintId;
+            document.getElementById('successModal').classList.add('active');
+            
+            // In real implementation, send data to server
+            const complaintData = {
+                name: document.getElementById('fullName').value,
+                phone: document.getElementById('mobile').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                ward: selectedWard,
+                description: document.getElementById('complaintDescription').value,
+                alerts: document.getElementById('alerts').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            console.log('Complaint submitted:', complaintData);
+        });
+        
+        // Close ward dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.ward-select-wrapper')) {
+                document.getElementById('wardOptions').style.display = 'none';
+            }
+        });
+        
+        // Initialize
+        populateWards();
+    </script>
+</body>
+</html>

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authority Login - Delhi Water-logging Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        /* Alert Marquee */
+        .alert-marquee {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #dc2626, #f59e0b, #10b981);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 1000;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            padding-left: 100%;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .login-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+        
+        /* Header Section */
+        .login-header {
+            background: #1e3a8a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .emblem {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .login-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .login-header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Login Form */
+        .login-body {
+            padding: 2.5rem;
+        }
+        
+        .alert-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .alert-box p {
+            color: #1e40af;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .form-group label .required {
+            color: #dc2626;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.9rem 1rem 0.9rem 3rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+        
+        .form-group input::placeholder {
+            color: #94a3b8;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #64748b;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+        }
+        
+        .password-toggle:hover {
+            color: #1e293b;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            padding: 0;
+            cursor: pointer;
+        }
+        
+        .checkbox-group label {
+            margin: 0;
+            font-weight: 400;
+            color: #475569;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .submit-btn:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+        
+        .divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: #e2e8f0;
+        }
+        
+        .divider span {
+            background: white;
+            padding: 0 1rem;
+            position: relative;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+        
+        .secondary-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        
+        .secondary-actions a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        
+        .secondary-actions a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Access Info Section */
+        .access-info {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+        }
+        
+        .access-info h3 {
+            color: #1e293b;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .info-list {
+            list-style: none;
+        }
+        
+        .info-list li {
+            color: #475569;
+            font-size: 0.85rem;
+            padding: 0.4rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-list li::before {
+            content: "→";
+            color: #1e3a8a;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        .login-footer {
+            background: #f8fafc;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .login-footer p {
+            color: #64748b;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        .support-contact {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .support-contact strong {
+            color: #1e293b;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .support-contact a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        
+        .support-contact a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Error Message */
+        .error-message {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            color: #991b1b;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* Loading State */
+        .submit-btn.loading {
+            background: #64748b;
+            cursor: not-allowed;
+        }
+        
+        .spinner {
+            border: 2px solid #ffffff50;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .login-body {
+                padding: 1.5rem;
+            }
+            
+            .login-header h1 {
+                font-size: 1.25rem;
+            }
+            
+            .marquee-content {
+                animation: marquee 15s linear infinite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Alert Marquee -->
+    <div class="alert-marquee">
+        <div class="marquee-content">
+            🚨 EMERGENCY: Severe water-logging in Ward 32 (Kanjhawala) - Response teams deployed | 
+            ⚠️ WARNING: Heavy rainfall alert for North Delhi (85mm expected) | 
+            📊 LIVE: 247 complaints received today | 1924 resolved this month | 
+            ✅ UPDATE: Drainage repair completed in Ward 67 | 
+            🌧️ IMD: Monsoon intensity increasing, prepare contingency plans | 
+            📍 HOTSPOT: Minto Bridge area under continuous monitoring | 
+            🔔 ALERT: 3 new red zone wards identified | 
+            ⏱️ RESPONSE: Average resolution time improved to 4.2 hours
+        </div>
+    </div>
+    
+    <div class="login-container">
+        <!-- Header -->
+        <div class="login-header">
+            <div class="emblem">🇮🇳</div>
+            <h1>Authority Access Portal</h1>
+            <p>Delhi Water-logging Risk Management System</p>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="login-body">
+            <div class="alert-box">
+                <p>🔒 <strong>Secure Login:</strong> This portal is restricted to authorized MCD officials and emergency response personnel only.</p>
+            </div>
+            
+            <!-- Error Message (Hidden by default) -->
+            <div class="error-message" id="errorMessage"></div>
+            
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label>Employee ID / Username <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">👤</span>
+                        <input 
+                            type="text" 
+                            id="employeeId" 
+                            required 
+                            placeholder="Enter your employee ID"
+                            autocomplete="username"
+                        >
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔑</span>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            required 
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                        >
+                        <button type="button" class="password-toggle" onclick="togglePassword()">👁️</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Department / Division <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🏢</span>
+                        <select id="department" required>
+                            <option value="">Select your department</option>
+                            <option value="mcd-admin">MCD Administration</option>
+                            <option value="drainage">Drainage & Sewerage Department</option>
+                            <option value="emergency">Emergency Response & Disaster Management</option>
+                            <option value="urban-planning">Urban Planning & Development</option>
+                            <option value="public-works">Public Works Department (PWD)</option>
+                            <option value="ward-officer">Ward Officer</option>
+                            <option value="monitoring">Monitoring & Surveillance Division</option>
+                            <option value="data-analytics">Data Analytics & GIS Team</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Access Level <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🎯</span>
+                        <select id="accessLevel" required>
+                            <option value="">Select access level</option>
+                            <option value="admin">Administrator (Full Access)</option>
+                            <option value="supervisor">Supervisor (Ward Level)</option>
+                            <option value="analyst">Data Analyst (View & Reports)</option>
+                            <option value="field-officer">Field Officer (Incident Response)</option>
+                            <option value="viewer">Viewer (Read Only)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ward Assignment (Optional)</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">📍</span>
+                        <select id="wardAssignment">
+                            <option value="">No specific ward / All wards</option>
+                            <option value="central">Central Delhi Wards</option>
+                            <option value="north">North Delhi Wards</option>
+                            <option value="south">South Delhi Wards</option>
+                            <option value="east">East Delhi Wards</option>
+                            <option value="west">West Delhi Wards</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me on this device</label>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>🔐 Login to Dashboard</span>
+                </button>
+                
+                <div class="secondary-actions">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                    <a href="#" onclick="showRequestAccess()">Request Access</a>
+                </div>
+            </form>
+            
+            <div class="divider">
+                <span>Need Help?</span>
+            </div>
+            
+            <div class="access-info">
+                <h3>🛡️ Access Requirements:</h3>
+                <ul class="info-list">
+                    <li>Valid MCD employee credentials</li>
+                    <li>Registered department email address</li>
+                    <li>Authorized access level clearance</li>
+                    <li>Two-factor authentication (for admin)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="login-footer">
+            <p>© 2025 Municipal Corporation of Delhi. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">This is a secure government portal. Unauthorized access is prohibited.</p>
+            
+            <div class="support-contact">
+                <strong>Technical Support:</strong>
+                📧 <a href="mailto:it.support@mcd.gov.in">it.support@mcd.gov.in</a><br>
+                📞 <a href="tel:01123456789">011-2345-6789</a> (Ext. 401)
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 🔐 VALID CREDENTIALS DATABASE (Role-based access)
+        const VALID_USERS = {
+            // Admin Users (Full Access)
+            'ADMIN001': { password: 'admin@123', department: 'mcd-admin', accessLevel: 'admin', name: 'Rajesh Kumar', ward: '' },
+            'ADMIN002': { password: 'admin@456', department: 'mcd-admin', accessLevel: 'admin', name: 'Priya Singh', ward: '' },
+            
+            // Drainage Department
+            'DRAIN001': { password: 'drain@123', department: 'drainage', accessLevel: 'supervisor', name: 'Suresh Yadav', ward: 'west' },
+            'DRAIN002': { password: 'drain@456', department: 'drainage', accessLevel: 'field-officer', name: 'Amit Sharma', ward: 'north' },
+            'DRAIN003': { password: 'drain@789', department: 'drainage', accessLevel: 'analyst', name: 'Neha Gupta', ward: 'central' },
+            
+            // Emergency Response
+            'EMER001': { password: 'emergency@123', department: 'emergency', accessLevel: 'supervisor', name: 'Vikram Rathore', ward: 'south' },
+            'EMER002': { password: 'emergency@456', department: 'emergency', accessLevel: 'field-officer', name: 'Rahul Verma', ward: 'east' },
+            
+            // Ward Officers
+            'WARD001': { password: 'ward@123', department: 'ward-officer', accessLevel: 'supervisor', name: 'Pooja Mehta', ward: 'central' },
+            'WARD002': { password: 'ward@456', department: 'ward-officer', accessLevel: 'supervisor', name: 'Sanjay Gupta', ward: 'north' },
+            'WARD003': { password: 'ward@789', department: 'ward-officer', accessLevel: 'viewer', name: 'Anjali Desai', ward: 'south' },
+            
+            // Data Analytics
+            'DATA001': { password: 'data@123', department: 'data-analytics', accessLevel: 'analyst', name: 'Arjun Nair', ward: '' },
+            'DATA002': { password: 'data@456', department: 'data-analytics', accessLevel: 'viewer', name: 'Kavita Reddy', ward: '' },
+            
+            // Public Works
+            'PWD001': { password: 'pwd@123', department: 'public-works', accessLevel: 'supervisor', name: 'Manoj Tiwari', ward: 'west' },
+            'PWD002': { password: 'pwd@456', department: 'public-works', accessLevel: 'field-officer', name: 'Deepak Malhotra', ward: 'east' }
+        };
+        
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleBtn = document.querySelector('.password-toggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                errorDiv.classList.remove('show');
+            }, 5000);
+        }
+        
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const employeeId = document.getElementById('employeeId').value.trim();
+            const password = document.getElementById('password').value;
+            const department = document.getElementById('department').value;
+            const accessLevel = document.getElementById('accessLevel').value;
+            const wardAssignment = document.getElementById('wardAssignment').value;
+            
+            // Hide any previous error
+            document.getElementById('errorMessage').classList.remove('show');
+            
+            // Show loading state
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.classList.add('loading');
+            submitBtn.innerHTML = '<div class="spinner"></div><span>Verifying credentials...</span>';
+            
+            // Simulate network delay
+            setTimeout(() => {
+                // Check if user exists in database
+                const user = VALID_USERS[employeeId];
+                
+                if (!user) {
+                    // User not found
+                    submitBtn.classList.remove('loading');
+                    submitBtn.innerHTML = '<span>🔐 Login to Dashboard</span>';
+                    showError('❌ Invalid Employee ID. Please check and try again.');
+                    return;
+                }
+                
+                // Check password
+                if (user.password !== password) {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.innerHTML = '<span>🔐 Login to Dashboard</span>';
+                    showError('❌ Incorrect password. Please try again.');
+                    return;
+                }
+                
+                // Check department match
+                if (user.department !== department) {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.innerHTML = '<span>🔐 Login to Dashboard</span>';
+                    showError(`❌ Access Denied: This Employee ID is registered under ${user.department} department.`);
+                    return;
+                }
+                
+                // Check access level match
+                if (user.accessLevel !== accessLevel) {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.innerHTML = '<span>🔐 Login to Dashboard</span>';
+                    showError(`❌ Access Denied: Your assigned access level is "${user.accessLevel}".`);
+                    return;
+                }
+                
+                // Check ward assignment if applicable
+                if (user.ward && wardAssignment !== user.ward) {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.innerHTML = '<span>🔐 Login to Dashboard</span>';
+                    showError(`❌ Access Denied: You are assigned to ${user.ward} Delhi wards only.`);
+                    return;
+                }
+                
+                // If we reach here, login is successful!
+                
+                // Store user session in localStorage (for demo purposes)
+                const userSession = {
+                    employeeId: employeeId,
+                    name: user.name,
+                    department: user.department,
+                    accessLevel: user.accessLevel,
+                    ward: user.ward,
+                    loginTime: new Date().toISOString()
+                };
+                
+                localStorage.setItem('currentUser', JSON.stringify(userSession));
+                
+                // Show success message with user info
+                const departmentName = document.getElementById('department').options[document.getElementById('department').selectedIndex].text;
+                const accessLevelName = document.getElementById('accessLevel').options[document.getElementById('accessLevel').selectedIndex].text;
+                
+                alert(
+                    '✅ Login Successful!\n\n' +
+                    '👤 Welcome, ' + user.name + '\n' +
+                    '🆔 Employee ID: ' + employeeId + '\n' +
+                    '🏢 Department: ' + departmentName + '\n' +
+                    '🎯 Access Level: ' + accessLevelName + '\n' +
+                    (user.ward ? '📍 Assigned Ward: ' + user.ward.toUpperCase() + ' Delhi\n' : '📍 Jurisdiction: All Wards\n') +
+                    '\n⏱️ Login Time: ' + new Date().toLocaleTimeString() + '\n\n' +
+                    'Redirecting to dashboard...'
+                );
+                
+                // Reset button state
+                submitBtn.classList.remove('loading');
+                submitBtn.innerHTML = '<span>🔐 Login to Dashboard</span>';
+                
+                // Redirect based on access level
+                switch(user.accessLevel) {
+                    case 'admin':
+                        window.location.href = 'delhi_waterlog_auth_dashboard.html?view=admin';
+                        break;
+                    case 'supervisor':
+                        window.location.href = 'delhi_waterlog_auth_dashboard.html?view=supervisor';
+                        break;
+                    case 'analyst':
+                        window.location.href = 'delhi_waterlog_auth_dashboard.html?view=analyst';
+                        break;
+                    case 'field-officer':
+                        window.location.href = 'delhi_waterlog_auth_dashboard.html?view=field';
+                        break;
+                    default:
+                        window.location.href = 'delhi_waterlog_auth_dashboard.html';
+                }
+            }, 1500);
+        }
+        
+        function showForgotPassword() {
+            alert(
+                '🔐 Password Recovery\n\n' +
+                'To reset your password:\n\n' +
+                '1️⃣ Contact IT Support at it.support@mcd.gov.in\n' +
+                '2️⃣ Provide your Employee ID and registered email\n' +
+                '3️⃣ Verify your identity with department head approval\n' +
+                '4️⃣ Receive temporary password via registered email\n\n' +
+                '⏱️ Processing time: 24-48 hours\n' +
+                '📞 For immediate assistance: 011-2345-6789 (Ext. 401)'
+            );
+        }
+        
+        function showRequestAccess() {
+            alert(
+                '📋 Request System Access\n\n' +
+                'To request access to the system:\n\n' +
+                '1️⃣ Fill out Access Request Form (Form-WL-2025)\n' +
+                '2️⃣ Get approval from your Department Head\n' +
+                '3️⃣ Submit to IT Administration with:\n' +
+                '   • Employee ID proof\n' +
+                '   • Department authorization letter\n' +
+                '   • Purpose of access justification\n' +
+                '   • Required access level\n\n' +
+                '⏱️ Processing time: 3-5 working days\n\n' +
+                '📧 Contact: it.support@mcd.gov.in'
+            );
+        }
+        
+        // Auto-fill demo credentials for testing (remove in production)
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔐 Login System Loaded');
+            console.log('Valid credentials for testing:');
+            console.log('Admin: ADMIN001 / admin@123');
+            console.log('Drainage: DRAIN001 / drain@123');
+            console.log('Emergency: EMER001 / emergency@123');
+            console.log('Ward Officer: WARD001 / ward@123');
+            console.log('Data Analyst: DATA001 / data@123');
+        });
+    </script>
+</body>
+</html>

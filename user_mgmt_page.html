@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Delhi Water-Logging Risk Management System</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+:root {
+    --alert-height: 50px;
+    --nav-height: 60px;
+    --header-total: calc(var(--alert-height) + var(--nav-height));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Alert Banner */
+.alert-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    color: white;
+    z-index: 1000;
+    height: var(--alert-height);
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+
+.alert-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.alert-marquee-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: var(--alert-height);
+    display: flex;
+    align-items: center;
+}
+
+.alert-marquee {
+    position: absolute;
+    width: 200%;
+    white-space: nowrap;
+    animation: marquee 120s linear infinite;
+}
+
+.alert-track {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.alert-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2.5rem;
+    font-size: 0.95rem;
+    height: var(--alert-height);
+    line-height: 1.4;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.alert-icon {
+    margin-right: 0.75rem;
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+}
+
+.alert-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Top Navigation */
+.top-nav {
+    background: #1e3a8a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: var(--alert-height);
+    left: 0;
+    right: 0;
+    z-index: 900;
+    height: var(--nav-height);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.emblem {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.nav-title h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.nav-title p {
+    font-size: 0.7rem;
+    opacity: 0.9;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-item {
+    background: rgba(255,255,255,0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    height: calc(100vh - var(--header-total));
+    margin-top: var(--header-total);
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+    overflow-y: auto;
+    background: #f8fafc;
+    height: 100%;
+}
+
+.content-header {
+    background: white;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 700;
+}
+
+.content-header h2 {
+    color: #1e293b;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.content-header p {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-left: 2.25rem;
+}
+
+.content-body {
+    padding: 1.5rem;
+}
+
+/* User Management Specific Styles */
+.user-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    color: #64748b;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.users-header {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8fafc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9rem;
+    width: 300px;
+}
+
+.btn-primary {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+}
+
+.users-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table thead {
+    background: #f8fafc;
+    position: sticky;
+    top: 0;
+}
+
+.users-table th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.users-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #1e293b;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.users-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.user-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-details h4 {
+    font-size: 0.9rem;
+    color: #1e293b;
+    margin-bottom: 0.15rem;
+}
+
+.user-details p {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.role-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.role-admin {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+.role-manager {
+    background: #fef08a;
+    color: #854d0e;
+}
+
+.role-operator {
+    background: #bbf7d0;
+    color: #166534;
+}
+
+.role-viewer {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-inactive {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.btn-icon {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.btn-icon.view {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.btn-icon.edit {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.btn-icon.delete {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+.btn-icon:hover {
+    opacity: 0.8;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+    </style>
+</head>
+<body>
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <div class="alert-container">
+            <div class="alert-marquee-wrapper">
+                <div class="alert-marquee">
+                    <div class="alert-track">
+                        <div class="alert-item">
+                            <span class="alert-icon">🚨</span>
+                            <span>HIGH RAINFALL ALERT: Heavy showers expected in North Delhi wards</span>
+                        </div>
+                        <div class="alert-item">
+                            <span class="alert-icon">⚠️</span>
+                            <span>Drainage maintenance scheduled for tomorrow in Central Delhi zones 5-8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="alert-close" onclick="this.parentElement.parentElement.style.display='none'">✕</button>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <div class="emblem">🔷</div>
+            <div class="nav-title">
+                <h1>Delhi Water-Logging Risk Management System</h1>
+                <p>Government of NCT of Delhi • Delhi Municipal Corporation</p>
+            </div>
+        </div>
+        
+        <div class="nav-right">
+            <a href="delhi_waterlog_auth_dashboard.html" class="nav-item">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+            <div class="user-info">
+                <div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">Dr. Rajesh Kumar</div>
+                    <div style="font-size: 0.65rem; opacity: 0.8;">Administrator</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2><i class="fas fa-users-cog"></i> User Management</h2>
+                <p>Manage system users, roles, and permissions</p>
+            </div>
+            
+            <div class="content-body">
+                <!-- User Statistics -->
+                <div class="user-stats">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">👥</div>
+                        </div>
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Total Users</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">✅</div>
+                        </div>
+                        <div class="stat-value">21</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">⚠️</div>
+                        </div>
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Inactive Users</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon">🔐</div>
+                        </div>
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">Admin Users</div>
+                    </div>
+                </div>
+
+                <!-- Users Header -->
+                <div class="users-header">
+                    <div class="search-box">
+                        <i class="fas fa-search" style="color: #64748b;"></i>
+                        <input type="text" placeholder="Search users by name, email, or role...">
+                    </div>
+                </div>
+
+                <!-- Users Table -->
+                <div class="users-table-container">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Role</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                                <th>Last Login</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">RK</div>
+                                        <div class="user-details">
+                                            <h4>Dr. Rajesh Kumar</h4>
+                                            <p>rajesh.kumar@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-admin">Administrator</span></td>
+                                <td>Delhi Municipal Corp.</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>2 hours ago</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">PS</div>
+                                        <div class="user-details">
+                                            <h4>Priya Sharma</h4>
+                                            <p>priya.sharma@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-manager">Manager</span></td>
+                                <td>Drainage Department</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>5 hours ago</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">AM</div>
+                                        <div class="user-details">
+                                            <h4>Amit Mehta</h4>
+                                            <p>amit.mehta@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-operator">Operator</span></td>
+                                <td>Field Operations</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>1 day ago</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">SV</div>
+                                        <div class="user-details">
+                                            <h4>Sneha Verma</h4>
+                                            <p>sneha.verma@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-admin">Administrator</span></td>
+                                <td>IT Department</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>3 hours ago</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">RG</div>
+                                        <div class="user-details">
+                                            <h4>Ravi Gupta</h4>
+                                            <p>ravi.gupta@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-viewer">Viewer</span></td>
+                                <td>Analytics Team</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>Yesterday</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">NK</div>
+                                        <div class="user-details">
+                                            <h4>Neha Kapoor</h4>
+                                            <p>neha.kapoor@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-manager">Manager</span></td>
+                                <td>Public Works Dept.</td>
+                                <td><span class="status-badge status-inactive">Inactive</span></td>
+                                <td>2 weeks ago</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">VS</div>
+                                        <div class="user-details">
+                                            <h4>Vikram Singh</h4>
+                                            <p>vikram.singh@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-operator">Operator</span></td>
+                                <td>Emergency Response</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>6 hours ago</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info-cell">
+                                        <div class="user-avatar">AP</div>
+                                        <div class="user-details">
+                                            <h4>Anjali Patel</h4>
+                                            <p>anjali.patel@dmc.gov.in</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="role-badge role-viewer">Viewer</span></td>
+                                <td>Monitoring Team</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>4 hours ago</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-icon view" title="View"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-icon edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-icon delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

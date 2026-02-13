@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Delhi Water-Logging Risk Management System</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+:root {
+    --alert-height: 50px;
+    --nav-height: 60px;
+    --header-total: calc(var(--alert-height) + var(--nav-height));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    background: #f8fafc;
+}
+
+/* Alert Banner */
+.alert-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    color: white;
+    z-index: 1000;
+    height: var(--alert-height);
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+
+.alert-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.alert-marquee-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: var(--alert-height);
+    display: flex;
+    align-items: center;
+}
+
+.alert-marquee {
+    position: absolute;
+    width: 200%;
+    white-space: nowrap;
+    animation: marquee 120s linear infinite;
+}
+
+.alert-track {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.alert-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2.5rem;
+    font-size: 0.95rem;
+    height: var(--alert-height);
+    line-height: 1.4;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.alert-icon {
+    margin-right: 0.75rem;
+    font-size: 1rem;
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+}
+
+.alert-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.alert-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Top Navigation */
+.top-nav {
+    background: #1e3a8a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: var(--alert-height);
+    left: 0;
+    right: 0;
+    z-index: 900;
+    height: var(--nav-height);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.emblem {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.nav-title h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.nav-title p {
+    font-size: 0.7rem;
+    opacity: 0.9;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-item {
+    background: rgba(255,255,255,0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    height: calc(100vh - var(--header-total));
+    margin-top: var(--header-total);
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+    overflow-y: auto;
+    background: #f8fafc;
+    height: 100%;
+}
+
+.content-body {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Profile Specific Styles */
+.profile-header {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.profile-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: white;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+    position: relative;
+}
+
+.avatar-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    background: #10b981;
+    border: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.change-photo-btn {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.change-photo-btn:hover {
+    background: #e2e8f0;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    color: #1e293b;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-role {
+    color: #1e3a8a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #64748b;
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.meta-icon {
+    width: 36px;
+    height: 36px;
+    background: #eff6ff;
+    color: #1e3a8a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.card-header h3 {
+    color: #1e293b;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.edit-btn {
+    color: #1e3a8a;
+    background: #eff6ff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.edit-btn:hover {
+    background: #dbeafe;
+}
+
+.info-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.info-label {
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.stats-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    padding: 1.25rem;
+    background: #f8fafc;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.stat-item:hover {
+    background: #eff6ff;
+    transform: translateY(-2px);
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-label {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-value {
+    color: #1e293b;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.stat-trend {
+    color: #10b981;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-item {
+    padding: 1.25rem;
+    border-left: 3px solid #1e3a8a;
+    background: #f8fafc;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.activity-item:hover {
+    background: #eff6ff;
+    transform: translateX(5px);
+}
+
+.activity-time {
+    color: #64748b;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-desc {
+    color: #1e293b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
+}
+
+@media (max-width: 968px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-meta {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <div class="alert-container">
+            <div class="alert-marquee-wrapper">
+                <div class="alert-marquee">
+                    <div class="alert-track">
+                        <div class="alert-item">
+                            <span class="alert-icon">🚨</span>
+                            <span>HIGH RAINFALL ALERT: Heavy showers expected in North Delhi wards</span>
+                        </div>
+                        <div class="alert-item">
+                            <span class="alert-icon">⚠️</span>
+                            <span>Drainage maintenance scheduled for tomorrow in Central Delhi zones 5-8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="alert-close" onclick="this.parentElement.parentElement.style.display='none'">✕</button>
+        </div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <div class="emblem">🔷</div>
+            <div class="nav-title">
+                <h1>Delhi Water-Logging Risk Management System</h1>
+                <p>Government of NCT of Delhi • Delhi Municipal Corporation</p>
+            </div>
+        </div>
+        
+        <div class="nav-right">
+            <a href="delhi_waterlog_auth_dashboard.html" class="nav-item">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+            <div class="user-info">
+                <div>
+                    <div style="font-size: 0.8rem; font-weight: 600;">Dr. Rajesh Kumar</div>
+                    <div style="font-size: 0.65rem; opacity: 0.8;">Administrator</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-body">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <div class="profile-avatar-section">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user"></i>
+                            <div class="avatar-badge">
+                                <i class="fas fa-check" style="font-size: 0.75rem; color: white;"></i>
+                            </div>
+                        </div>
+                        <button class="change-photo-btn" onclick="alert('Change photo functionality')">
+                            <i class="fas fa-camera"></i>
+                            Change Photo
+                        </button>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Dr. Rajesh Kumar</h2>
+                        <div class="profile-role">
+                            <i class="fas fa-shield-alt"></i>
+                            System Administrator
+                        </div>
+                        <div class="profile-meta">
+                            <div class="meta-item">
+                                <div class="meta-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.75rem; color: #94a3b8;">Email</div>
+                                    <div style="font-weight: 600; color: #1e293b;">rajesh.kumar@dmc.gov.in</div>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.75rem; color: #94a3b8;">Phone</div>
+                                    <div style="font-weight: 600; color: #1e293b;">+91 98765 43210</div>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.75rem; color: #94a3b8;">Department</div>
+                                    <div style="font-weight: 600; color: #1e293b;">Delhi Municipal Corporation</div>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-icon">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div>
+                                    <div style="font-size: 0.75rem; color: #94a3b8;">Joined</div>
+                                    <div style="font-weight: 600; color: #1e293b;">January 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Grid -->
+                <div class="profile-grid">
+                    <!-- Personal Information -->
+                    <div class="profile-card">
+                        <div class="card-header">
+                            <h3>
+                                <i class="fas fa-user-circle"></i>
+                                Personal Information
+                            </h3>
+                            <button class="edit-btn" onclick="alert('Edit profile functionality')">
+                                <i class="fas fa-edit"></i>
+                                Edit Profile
+                            </button>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Full Name</div>
+                                <div class="info-value">Dr. Rajesh Kumar</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Designation</div>
+                                <div class="info-value">Chief Administrator</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Employee ID</div>
+                                <div class="info-value">DMC-2023-001</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Office Location</div>
+                                <div class="info-value">Civic Centre, Minto Road, New Delhi</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Working Hours</div>
+                                <div class="info-value">Monday - Friday, 9:00 AM - 6:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="stats-card">
+                        <div class="card-header">
+                            <h3>
+                                <i class="fas fa-chart-line"></i>
+                                Quick Stats
+                            </h3>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">
+                                <i class="fas fa-tasks"></i>
+                                Active Tasks
+                            </div>
+                            <div class="stat-value">24</div>
+                            <div class="stat-trend">
+                                <i class="fas fa-arrow-up"></i> 3 new this week
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">
+                                <i class="fas fa-bell"></i>
+                                Alerts Sent
+                            </div>
+                            <div class="stat-value">156</div>
+                            <div class="stat-trend">
+                                <i class="fas fa-arrow-up"></i> 12 this month
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">
+                                <i class="fas fa-check-circle"></i>
+                                Completed Actions
+                            </div>
+                            <div class="stat-value">342</div>
+                            <div class="stat-trend">
+                                <i class="fas fa-arrow-up"></i> 98% completion rate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fas fa-history"></i>
+                            Recent Activity
+                        </h3>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-time">
+                                <i class="fas fa-clock"></i>
+                                Today, 2:30 PM
+                            </div>
+                            <div class="activity-desc">
+                                <strong>Logged into the system</strong> from Delhi, India • IP: 103.xx.xx.xx
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">
+                                <i class="fas fa-clock"></i>
+                                Today, 10:15 AM
+                            </div>
+                            <div class="activity-desc">
+                                <strong>Updated ward risk assessment</strong> for North Delhi zones (15 wards modified)
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">
+                                <i class="fas fa-clock"></i>
+                                Yesterday, 4:45 PM
+                            </div>
+                            <div class="activity-desc">
+                                <strong>Generated monthly report</strong> for January 2024 (250 wards analyzed)
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">
+                                <i class="fas fa-clock"></i>
+                                Yesterday, 11:20 AM
+                            </div>
+                            <div class="activity-desc">
+                                <strong>Added new hotspot</strong> in Ward 126 (Severity: High, Water Depth: 35cm)
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-time">
+                                <i class="fas fa-clock"></i>
+                                2 days ago, 3:00 PM
+                            </div>
+                            <div class="activity-desc">
+                                <strong>Sent emergency alert</strong> to 5 zones (North, South, East, West, Central Delhi)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

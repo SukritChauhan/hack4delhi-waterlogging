@@ -1,0 +1,2902 @@
+[
+  {
+    "ward_id": "DEL_CANTT_001",
+    "risk_score": 25.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.622003401500052,
+    "lon": 77.13054954550006,
+    "drainage_score": 78,
+    "drainage_age": 35
+  },
+  {
+    "ward_id": "DEL_CANTT_002",
+    "risk_score": 29.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.610229239500057,
+    "lon": 77.13936651000006,
+    "drainage_score": 75,
+    "drainage_age": 32
+  },
+  {
+    "ward_id": "DEL_CANTT_003",
+    "risk_score": 22.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.593773734500076,
+    "lon": 77.14784660650005,
+    "drainage_score": 80,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_CANTT_004",
+    "risk_score": 33.7,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.56592405850003,
+    "lon": 77.14334604650006,
+    "drainage_score": 72,
+    "drainage_age": 30
+  },
+  {
+    "ward_id": "DEL_CANTT_005",
+    "risk_score": 26.1,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.57474325700005,
+    "lon": 77.13384187100004,
+    "drainage_score": 77,
+    "drainage_age": 34
+  },
+  {
+    "ward_id": "DEL_CANTT_006",
+    "risk_score": 37.3,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.57318357350007,
+    "lon": 77.10626808300006,
+    "drainage_score": 70,
+    "drainage_age": 28
+  },
+  {
+    "ward_id": "DEL_CANTT_007",
+    "risk_score": 29.400000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.59485790000005,
+    "lon": 77.11005448200007,
+    "drainage_score": 76,
+    "drainage_age": 33
+  },
+  {
+    "ward_id": "DEL_CANTT_008",
+    "risk_score": 25.349999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.600375404500056,
+    "lon": 77.12360107650005,
+    "drainage_score": 79,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_NDMC_001",
+    "risk_score": 20.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.616813283000056,
+    "lon": 77.22864108300004,
+    "drainage_score": 85,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_NDMC_002",
+    "risk_score": 19.95,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.63741817500005,
+    "lon": 77.21272293600006,
+    "drainage_score": 88,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_NDMC_003",
+    "risk_score": 24.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.619796772500052,
+    "lon": 77.18619568550005,
+    "drainage_score": 83,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_NDMC_004",
+    "risk_score": 20.400000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.62117535750005,
+    "lon": 77.21527864300003,
+    "drainage_score": 86,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_NDMC_005",
+    "risk_score": 20.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.60168441850007,
+    "lon": 77.22106828500006,
+    "drainage_score": 87,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_NDMC_006",
+    "risk_score": 24.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.58489630650007,
+    "lon": 77.21827901600005,
+    "drainage_score": 84,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_NDMC_007",
+    "risk_score": 24.599999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.570621317000047,
+    "lon": 77.20409910950005,
+    "drainage_score": 82,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_NDMC_008",
+    "risk_score": 24.900000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.577248492000052,
+    "lon": 77.19661165150006,
+    "drainage_score": 81,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_NDMC_009",
+    "risk_score": 24.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.58928413250004,
+    "lon": 77.18965869100006,
+    "drainage_score": 83,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_080",
+    "risk_score": 49.95,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65769468950006,
+    "lon": 77.23341113700008,
+    "drainage_score": 65,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_081",
+    "risk_score": 44.05,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.636093620000057,
+    "lon": 77.23098568600005,
+    "drainage_score": 68,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_082",
+    "risk_score": 54.800000000000004,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.64775827750003,
+    "lon": 77.22614376650006,
+    "drainage_score": 63,
+    "drainage_age": 58
+  },
+  {
+    "ward_id": "DEL_083",
+    "risk_score": 50.75000000000001,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.64642200450004,
+    "lon": 77.23036135650005,
+    "drainage_score": 64,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_084",
+    "risk_score": 59.0,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.64397417400005,
+    "lon": 77.23567938300005,
+    "drainage_score": 62,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_085",
+    "risk_score": 45.65,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.652121558500056,
+    "lon": 77.21586703950004,
+    "drainage_score": 66,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_086",
+    "risk_score": 60.050000000000004,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.65324501850006,
+    "lon": 77.22560028550006,
+    "drainage_score": 61,
+    "drainage_age": 62
+  },
+  {
+    "ward_id": "DEL_087",
+    "risk_score": 54.7,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.64911024150004,
+    "lon": 77.21510347150007,
+    "drainage_score": 63,
+    "drainage_age": 57
+  },
+  {
+    "ward_id": "DEL_088",
+    "risk_score": 64.5,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.653887317000056,
+    "lon": 77.20886467150004,
+    "drainage_score": 60,
+    "drainage_age": 65
+  },
+  {
+    "ward_id": "DEL_089",
+    "risk_score": 41.1,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.642696831500047,
+    "lon": 77.21091283100006,
+    "drainage_score": 67,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_090",
+    "risk_score": 39.5,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.652523299500047,
+    "lon": 77.20347478050004,
+    "drainage_score": 69,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_091",
+    "risk_score": 34.4,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65503411450007,
+    "lon": 77.19159006900006,
+    "drainage_score": 71,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_092",
+    "risk_score": 32.95,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65362731550005,
+    "lon": 77.18033867000005,
+    "drainage_score": 73,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_093",
+    "risk_score": 42.8,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65607106400006,
+    "lon": 77.15934055000005,
+    "drainage_score": 68,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_094",
+    "risk_score": 37.0,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.658699731500064,
+    "lon": 77.16116413050005,
+    "drainage_score": 72,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_095",
+    "risk_score": 31.2,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65342184450006,
+    "lon": 77.17402800550005,
+    "drainage_score": 75,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_096",
+    "risk_score": 38.6,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.648250937500052,
+    "lon": 77.16072844750005,
+    "drainage_score": 70,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_097",
+    "risk_score": 32.15,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65528610600003,
+    "lon": 77.14302265300006,
+    "drainage_score": 74,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_098",
+    "risk_score": 37.800000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.641896311500066,
+    "lon": 77.13362627500007,
+    "drainage_score": 71,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_099",
+    "risk_score": 27.150000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.670345933500045,
+    "lon": 77.14709202100008,
+    "drainage_score": 76,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_100",
+    "risk_score": 33.2,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.66573485850006,
+    "lon": 77.15581466250006,
+    "drainage_score": 73,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_101",
+    "risk_score": 42.65,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.653847884000072,
+    "lon": 77.12482278550004,
+    "drainage_score": 69,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_102",
+    "risk_score": 47.5,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.657284975500065,
+    "lon": 77.11489640150006,
+    "drainage_score": 67,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_103",
+    "risk_score": 25.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.66768154850007,
+    "lon": 77.12759857950007,
+    "drainage_score": 78,
+    "drainage_age": 34
+  },
+  {
+    "ward_id": "DEL_104",
+    "risk_score": 52.6,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.671007878500035,
+    "lon": 77.11529615200004,
+    "drainage_score": 65,
+    "drainage_age": 53
+  },
+  {
+    "ward_id": "DEL_105",
+    "risk_score": 26.35,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.644967247000068,
+    "lon": 77.11813033650006,
+    "drainage_score": 77,
+    "drainage_age": 35
+  },
+  {
+    "ward_id": "DEL_106",
+    "risk_score": 32.25,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.64644555700005,
+    "lon": 77.10396839650005,
+    "drainage_score": 74,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_107",
+    "risk_score": 41.85,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.64853083400007,
+    "lon": 77.09602728900006,
+    "drainage_score": 70,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_108",
+    "risk_score": 46.7,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65227509600004,
+    "lon": 77.10372135950007,
+    "drainage_score": 68,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_109",
+    "risk_score": 37.1,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.628729560000068,
+    "lon": 77.09653483750006,
+    "drainage_score": 72,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_110",
+    "risk_score": 37.9,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.61517833800008,
+    "lon": 77.11025660300007,
+    "drainage_score": 71,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_111",
+    "risk_score": 42.9,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.62687242800004,
+    "lon": 77.12097350450006,
+    "drainage_score": 69,
+    "drainage_age": 47
+  },
+  {
+    "ward_id": "DEL_112",
+    "risk_score": 33.050000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.636019093000044,
+    "lon": 77.11668854050006,
+    "drainage_score": 73,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_113",
+    "risk_score": 51.80000000000001,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.63351961300006,
+    "lon": 77.07578824600006,
+    "drainage_score": 66,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_114",
+    "risk_score": 41.95,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.638478987500065,
+    "lon": 77.09533558600006,
+    "drainage_score": 70,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_115",
+    "risk_score": 46.95,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.65378091300005,
+    "lon": 77.09220046600007,
+    "drainage_score": 68,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_116",
+    "risk_score": 56.25,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.647533246500046,
+    "lon": 77.08343740000007,
+    "drainage_score": 65,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_117",
+    "risk_score": 38.15,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.622480533000044,
+    "lon": 77.07811937400007,
+    "drainage_score": 71,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_118",
+    "risk_score": 33.85,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.61705138300007,
+    "lon": 77.09706035200006,
+    "drainage_score": 72,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_119",
+    "risk_score": 61.599999999999994,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.619389610500065,
+    "lon": 77.06256953600007,
+    "drainage_score": 63,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_120",
+    "risk_score": 46.00000000000001,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.611342052000055,
+    "lon": 77.07858200600006,
+    "drainage_score": 69,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_121",
+    "risk_score": 67.5,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.643665119000048,
+    "lon": 77.04016555300007,
+    "drainage_score": 60,
+    "drainage_age": 65
+  },
+  {
+    "ward_id": "DEL_122",
+    "risk_score": 72.35,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.646396557500054,
+    "lon": 77.02585089900006,
+    "drainage_score": 58,
+    "drainage_age": 68
+  },
+  {
+    "ward_id": "DEL_123",
+    "risk_score": 57.55,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.62783470200003,
+    "lon": 77.05907508950006,
+    "drainage_score": 64,
+    "drainage_age": 58
+  },
+  {
+    "ward_id": "DEL_124",
+    "risk_score": 62.650000000000006,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.640244761000048,
+    "lon": 77.06866011400007,
+    "drainage_score": 62,
+    "drainage_age": 62
+  },
+  {
+    "ward_id": "DEL_125",
+    "risk_score": 68.30000000000001,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.62733005250007,
+    "lon": 77.03315869400004,
+    "drainage_score": 59,
+    "drainage_age": 66
+  },
+  {
+    "ward_id": "DEL_126",
+    "risk_score": 63.45,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.62323780750006,
+    "lon": 77.04030479200006,
+    "drainage_score": 61,
+    "drainage_age": 63
+  },
+  {
+    "ward_id": "DEL_127",
+    "risk_score": 58.349999999999994,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.617414386000036,
+    "lon": 77.04390703600006,
+    "drainage_score": 63,
+    "drainage_age": 59
+  },
+  {
+    "ward_id": "DEL_128",
+    "risk_score": 51.0,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.613313480000073,
+    "lon": 77.06794595300005,
+    "drainage_score": 67,
+    "drainage_age": 51
+  },
+  {
+    "ward_id": "DEL_129",
+    "risk_score": 45.35,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.60763153350004,
+    "lon": 77.09459447600005,
+    "drainage_score": 70,
+    "drainage_age": 47
+  },
+  {
+    "ward_id": "DEL_130",
+    "risk_score": 52.05000000000001,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.596120062500063,
+    "lon": 77.08376528550005,
+    "drainage_score": 66,
+    "drainage_age": 53
+  },
+  {
+    "ward_id": "DEL_131",
+    "risk_score": 32.0,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.60128279150004,
+    "lon": 77.10251312500006,
+    "drainage_score": 74,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_132",
+    "risk_score": 32.800000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.603550260000077,
+    "lon": 77.09880757500005,
+    "drainage_score": 73,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_133",
+    "risk_score": 78.0,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.544827347500046,
+    "lon": 76.95184768600006,
+    "drainage_score": 55,
+    "drainage_age": 72
+  },
+  {
+    "ward_id": "DEL_134",
+    "risk_score": 73.4,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.579979940000044,
+    "lon": 76.99819626300004,
+    "drainage_score": 57,
+    "drainage_age": 70
+  },
+  {
+    "ward_id": "DEL_135",
+    "risk_score": 67.75,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.60032636400004,
+    "lon": 77.02826736750006,
+    "drainage_score": 60,
+    "drainage_age": 66
+  },
+  {
+    "ward_id": "DEL_136",
+    "risk_score": 62.650000000000006,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.587412344000057,
+    "lon": 77.05183916000007,
+    "drainage_score": 62,
+    "drainage_age": 62
+  },
+  {
+    "ward_id": "DEL_137",
+    "risk_score": 72.35,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.609814082500066,
+    "lon": 76.99549233400003,
+    "drainage_score": 58,
+    "drainage_age": 68
+  },
+  {
+    "ward_id": "DEL_138",
+    "risk_score": 76.95,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.612986173000053,
+    "lon": 76.97837942800004,
+    "drainage_score": 56,
+    "drainage_age": 70
+  },
+  {
+    "ward_id": "DEL_139",
+    "risk_score": 82.85,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.64130161500006,
+    "lon": 76.97009246950006,
+    "drainage_score": 53,
+    "drainage_age": 75
+  },
+  {
+    "ward_id": "DEL_140",
+    "risk_score": 88.25,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.581362037000076,
+    "lon": 76.90937084800004,
+    "drainage_score": 50,
+    "drainage_age": 78
+  },
+  {
+    "ward_id": "DEL_141",
+    "risk_score": 66.7,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.54867316900004,
+    "lon": 77.04413610700004,
+    "drainage_score": 61,
+    "drainage_age": 64
+  },
+  {
+    "ward_id": "DEL_142",
+    "risk_score": 46.95,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.57320547650005,
+    "lon": 77.08300620900008,
+    "drainage_score": 68,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_143",
+    "risk_score": 33.6,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.542216852000053,
+    "lon": 77.09143240650008,
+    "drainage_score": 72,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_144",
+    "risk_score": 27.95,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.537370125500047,
+    "lon": 77.12939970200006,
+    "drainage_score": 75,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_145",
+    "risk_score": 38.050000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.584880287500027,
+    "lon": 77.08062567350007,
+    "drainage_score": 71,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_146",
+    "risk_score": 42.1,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.594787629500075,
+    "lon": 77.09556914850006,
+    "drainage_score": 70,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_147",
+    "risk_score": 52.85,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.596806453000056,
+    "lon": 77.06915867900005,
+    "drainage_score": 65,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_148",
+    "risk_score": 47.75,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.60878690000007,
+    "lon": 77.05755693700004,
+    "drainage_score": 67,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_149",
+    "risk_score": 25.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.63706302400004,
+    "lon": 77.18091359200005,
+    "drainage_score": 78,
+    "drainage_age": 35
+  },
+  {
+    "ward_id": "DEL_150",
+    "risk_score": 27.150000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.629136663000057,
+    "lon": 77.16065209050007,
+    "drainage_score": 76,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_151",
+    "risk_score": 26.35,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.63162714400005,
+    "lon": 77.14846644350007,
+    "drainage_score": 77,
+    "drainage_age": 35
+  },
+  {
+    "ward_id": "DEL_152",
+    "risk_score": 27.95,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.62926924000007,
+    "lon": 77.13831548100003,
+    "drainage_score": 75,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_153",
+    "risk_score": 55.2,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.63218957450005,
+    "lon": 77.24832766200007,
+    "drainage_score": 62,
+    "drainage_age": 58
+  },
+  {
+    "ward_id": "DEL_154",
+    "risk_score": 44.05,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.601169540500052,
+    "lon": 77.25271593250005,
+    "drainage_score": 68,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_155",
+    "risk_score": 22.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.573706156000043,
+    "lon": 77.24566864950006,
+    "drainage_score": 80,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_156",
+    "risk_score": 20.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.57875105000005,
+    "lon": 77.25545130250006,
+    "drainage_score": 82,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_157",
+    "risk_score": 26.099999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.58258075500004,
+    "lon": 77.23347851050005,
+    "drainage_score": 79,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_158",
+    "risk_score": 26.700000000000003,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.57395874200006,
+    "lon": 77.21857546000004,
+    "drainage_score": 77,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_159",
+    "risk_score": 25.900000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.56615166250006,
+    "lon": 77.22793590500004,
+    "drainage_score": 78,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_160",
+    "risk_score": 21.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.56444415650006,
+    "lon": 77.24321624850006,
+    "drainage_score": 81,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_161",
+    "risk_score": 32.25,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.53885420700007,
+    "lon": 77.19502163350006,
+    "drainage_score": 74,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_162",
+    "risk_score": 33.050000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.53445103100006,
+    "lon": 77.21164495800005,
+    "drainage_score": 73,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_163",
+    "risk_score": 25.849999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.557934453500053,
+    "lon": 77.19561452150006,
+    "drainage_score": 79,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_164",
+    "risk_score": 22.05,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.555078188500033,
+    "lon": 77.20876585700006,
+    "drainage_score": 80,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_165",
+    "risk_score": 20.45,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.56029312750005,
+    "lon": 77.16106531550005,
+    "drainage_score": 82,
+    "drainage_age": 35
+  },
+  {
+    "ward_id": "DEL_166",
+    "risk_score": 25.900000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.55715378800005,
+    "lon": 77.17847466550006,
+    "drainage_score": 78,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_167",
+    "risk_score": 21.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.568167710500063,
+    "lon": 77.17902263850004,
+    "drainage_score": 81,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_168",
+    "risk_score": 27.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.57803618150004,
+    "lon": 77.16678309250005,
+    "drainage_score": 76,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_169",
+    "risk_score": 38.95,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.52458834300006,
+    "lon": 77.19081302650005,
+    "drainage_score": 70,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_170",
+    "risk_score": 47.050000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.51627412950006,
+    "lon": 77.18737247850004,
+    "drainage_score": 68,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_171",
+    "risk_score": 34.1,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.539426004000063,
+    "lon": 77.16382314350005,
+    "drainage_score": 72,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_172",
+    "risk_score": 52.95,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.513564937500064,
+    "lon": 77.13533307450007,
+    "drainage_score": 65,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_173",
+    "risk_score": 58.449999999999996,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.49815921700005,
+    "lon": 77.20532530950007,
+    "drainage_score": 63,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_174",
+    "risk_score": 63.300000000000004,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.49653009550005,
+    "lon": 77.15685221650006,
+    "drainage_score": 61,
+    "drainage_age": 63
+  },
+  {
+    "ward_id": "DEL_175",
+    "risk_score": 69.35,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.44750415750005,
+    "lon": 77.15480855000007,
+    "drainage_score": 58,
+    "drainage_age": 68
+  },
+  {
+    "ward_id": "DEL_176",
+    "risk_score": 73.4,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.449811010000047,
+    "lon": 77.20545556500005,
+    "drainage_score": 57,
+    "drainage_age": 70
+  },
+  {
+    "ward_id": "DEL_177",
+    "risk_score": 67.5,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.472945735500048,
+    "lon": 77.22531731600006,
+    "drainage_score": 60,
+    "drainage_age": 65
+  },
+  {
+    "ward_id": "DEL_178",
+    "risk_score": 83.65,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.48493264250004,
+    "lon": 77.22336797200003,
+    "drainage_score": 52,
+    "drainage_age": 76
+  },
+  {
+    "ward_id": "DEL_179",
+    "risk_score": 78.25,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.500387287000052,
+    "lon": 77.22925642850007,
+    "drainage_score": 55,
+    "drainage_age": 73
+  },
+  {
+    "ward_id": "DEL_180",
+    "risk_score": 72.6,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.52677582900003,
+    "lon": 77.24080427200005,
+    "drainage_score": 58,
+    "drainage_age": 69
+  },
+  {
+    "ward_id": "DEL_181",
+    "risk_score": 67.75,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.510874765500063,
+    "lon": 77.22485019200005,
+    "drainage_score": 60,
+    "drainage_age": 66
+  },
+  {
+    "ward_id": "DEL_182",
+    "risk_score": 62.900000000000006,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.51662565350003,
+    "lon": 77.23261163650005,
+    "drainage_score": 62,
+    "drainage_age": 63
+  },
+  {
+    "ward_id": "DEL_183",
+    "risk_score": 58.05,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.520548553000054,
+    "lon": 77.23522124250005,
+    "drainage_score": 64,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_184",
+    "risk_score": 52.30000000000001,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.52436445750004,
+    "lon": 77.22397433450007,
+    "drainage_score": 66,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_185",
+    "risk_score": 47.2,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.517031800500035,
+    "lon": 77.25100913350008,
+    "drainage_score": 68,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_186",
+    "risk_score": 79.05000000000001,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.49404733650007,
+    "lon": 77.24949547250006,
+    "drainage_score": 54,
+    "drainage_age": 74
+  },
+  {
+    "ward_id": "DEL_187",
+    "risk_score": 83.1,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.494004846500047,
+    "lon": 77.25160202150005,
+    "drainage_score": 53,
+    "drainage_age": 76
+  },
+  {
+    "ward_id": "DEL_188",
+    "risk_score": 74.19999999999999,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.49867001900006,
+    "lon": 77.26055373350005,
+    "drainage_score": 56,
+    "drainage_age": 71
+  },
+  {
+    "ward_id": "DEL_189",
+    "risk_score": 28.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.53430495750007,
+    "lon": 77.23452953950007,
+    "drainage_score": 75,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_190",
+    "risk_score": 26.05,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.533160299500057,
+    "lon": 77.24946403100006,
+    "drainage_score": 78,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_191",
+    "risk_score": 37.9,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.54270910100007,
+    "lon": 77.22688487650007,
+    "drainage_score": 71,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_192",
+    "risk_score": 20.900000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.55229314050004,
+    "lon": 77.24454575500005,
+    "drainage_score": 83,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_193",
+    "risk_score": 22.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.559953817000064,
+    "lon": 77.26846339950006,
+    "drainage_score": 80,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_194",
+    "risk_score": 22.599999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.55114480000006,
+    "lon": 77.25849659100004,
+    "drainage_score": 79,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_195",
+    "risk_score": 27.050000000000004,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.53071420550006,
+    "lon": 77.26236833050007,
+    "drainage_score": 77,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_196",
+    "risk_score": 21.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.538053622000064,
+    "lon": 77.26038305350005,
+    "drainage_score": 81,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_197",
+    "risk_score": 56.35,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.515653518500073,
+    "lon": 77.27683569750005,
+    "drainage_score": 65,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_198",
+    "risk_score": 62.650000000000006,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.495859838500053,
+    "lon": 77.28180338150005,
+    "drainage_score": 62,
+    "drainage_age": 62
+  },
+  {
+    "ward_id": "DEL_199",
+    "risk_score": 50.45,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.51208056850004,
+    "lon": 77.28598953050005,
+    "drainage_score": 68,
+    "drainage_age": 51
+  },
+  {
+    "ward_id": "DEL_200",
+    "risk_score": 33.300000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.54036968050005,
+    "lon": 77.27539390200005,
+    "drainage_score": 73,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_201",
+    "risk_score": 42.6,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.509264578000028,
+    "lon": 77.32807111000008,
+    "drainage_score": 70,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_202",
+    "risk_score": 55.300000000000004,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.496104631000037,
+    "lon": 77.32520548450003,
+    "drainage_score": 66,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_203",
+    "risk_score": 60.8,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.501882979000044,
+    "lon": 77.30423880550006,
+    "drainage_score": 64,
+    "drainage_age": 59
+  },
+  {
+    "ward_id": "DEL_204",
+    "risk_score": 51.25,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.49595434650004,
+    "lon": 77.31191940100007,
+    "drainage_score": 67,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_205",
+    "risk_score": 28.45,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.571938965000044,
+    "lon": 77.27803944000004,
+    "drainage_score": 75,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_206",
+    "risk_score": 26.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.560313318000055,
+    "lon": 77.28411654300007,
+    "drainage_score": 78,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_207",
+    "risk_score": 72.6,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.52499137950005,
+    "lon": 77.32044441350007,
+    "drainage_score": 58,
+    "drainage_age": 69
+  },
+  {
+    "ward_id": "DEL_208",
+    "risk_score": 34.1,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.53647839500005,
+    "lon": 77.30405015950004,
+    "drainage_score": 72,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_209",
+    "risk_score": 21.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.604318893000027,
+    "lon": 77.30056918800005,
+    "drainage_score": 85,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_210",
+    "risk_score": 21.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.608250539500062,
+    "lon": 77.31266500300006,
+    "drainage_score": 84,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_211",
+    "risk_score": 24.95,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.596742510500064,
+    "lon": 77.28867998500004,
+    "drainage_score": 82,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_212",
+    "risk_score": 21.650000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.594771583000067,
+    "lon": 77.30286887500002,
+    "drainage_score": 83,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_213",
+    "risk_score": 25.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.61572682350004,
+    "lon": 77.31532850750006,
+    "drainage_score": 80,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_214",
+    "risk_score": 25.849999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.61317017400006,
+    "lon": 77.32069594150005,
+    "drainage_score": 79,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_215",
+    "risk_score": 26.150000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.61107365850006,
+    "lon": 77.33170479550006,
+    "drainage_score": 78,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_216",
+    "risk_score": 26.450000000000003,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.617611030000035,
+    "lon": 77.33477254200005,
+    "drainage_score": 77,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_217",
+    "risk_score": 22.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.622248159000065,
+    "lon": 77.29511192200007,
+    "drainage_score": 81,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_218",
+    "risk_score": 21.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.62894648750006,
+    "lon": 77.29539938300007,
+    "drainage_score": 83,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_219",
+    "risk_score": 21.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.61992181350004,
+    "lon": 77.30486313500006,
+    "drainage_score": 84,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_220",
+    "risk_score": 24.849999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.609054674500044,
+    "lon": 77.29004093250003,
+    "drainage_score": 82,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_221",
+    "risk_score": 25.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.635845464000056,
+    "lon": 77.27271692250005,
+    "drainage_score": 80,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_222",
+    "risk_score": 26.150000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.63754071400004,
+    "lon": 77.27954411800005,
+    "drainage_score": 78,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_223",
+    "risk_score": 22.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.62828014400006,
+    "lon": 77.28536071000005,
+    "drainage_score": 81,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_224",
+    "risk_score": 25.849999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.620765362500062,
+    "lon": 77.27838978300008,
+    "drainage_score": 79,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_225",
+    "risk_score": 20.95,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.65690612150007,
+    "lon": 77.30857317700006,
+    "drainage_score": 85,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_226",
+    "risk_score": 21.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.66163592250004,
+    "lon": 77.29480649500005,
+    "drainage_score": 84,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_227",
+    "risk_score": 20.650000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.638276851500052,
+    "lon": 77.31436281850003,
+    "drainage_score": 86,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_228",
+    "risk_score": 21.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.640831657000035,
+    "lon": 77.29541285800008,
+    "drainage_score": 83,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_229",
+    "risk_score": 69.35,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.65361507150007,
+    "lon": 77.27669645900005,
+    "drainage_score": 58,
+    "drainage_age": 68
+  },
+  {
+    "ward_id": "DEL_230",
+    "risk_score": 64.5,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.64931116850005,
+    "lon": 77.27424405850007,
+    "drainage_score": 60,
+    "drainage_age": 65
+  },
+  {
+    "ward_id": "DEL_231",
+    "risk_score": 59.150000000000006,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.65021772950004,
+    "lon": 77.28357755400006,
+    "drainage_score": 62,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_232",
+    "risk_score": 54.050000000000004,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.650296654000044,
+    "lon": 77.29007237350007,
+    "drainage_score": 64,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_233",
+    "risk_score": 53.0,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.666554539500055,
+    "lon": 77.25863133850004,
+    "drainage_score": 65,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_234",
+    "risk_score": 48.400000000000006,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.661375972500053,
+    "lon": 77.26007762650005,
+    "drainage_score": 67,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_235",
+    "risk_score": 43.55,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.665407815000066,
+    "lon": 77.27870419350006,
+    "drainage_score": 69,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_236",
+    "risk_score": 38.550000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.66628259300003,
+    "lon": 77.27184106450005,
+    "drainage_score": 71,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_237",
+    "risk_score": 33.7,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.667961608500036,
+    "lon": 77.28696869400008,
+    "drainage_score": 73,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_238",
+    "risk_score": 28.85,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.669266105000048,
+    "lon": 77.30268472000003,
+    "drainage_score": 75,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_239",
+    "risk_score": 27.1,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.675165197500036,
+    "lon": 77.31061235250004,
+    "drainage_score": 77,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_240",
+    "risk_score": 25.75,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.681501905500056,
+    "lon": 77.32622058050003,
+    "drainage_score": 79,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_241",
+    "risk_score": 22.150000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.684949477500055,
+    "lon": 77.31000149800008,
+    "drainage_score": 81,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_242",
+    "risk_score": 21.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.68818864650004,
+    "lon": 77.32383555350006,
+    "drainage_score": 83,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_243",
+    "risk_score": 20.95,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69463467500006,
+    "lon": 77.30756257200005,
+    "drainage_score": 85,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_244",
+    "risk_score": 20.349999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.694611062000064,
+    "lon": 77.31693200050003,
+    "drainage_score": 87,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_245",
+    "risk_score": 16.75,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.68844075900006,
+    "lon": 77.29862882650008,
+    "drainage_score": 89,
+    "drainage_age": 47
+  },
+  {
+    "ward_id": "DEL_246",
+    "risk_score": 16.15,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69514682050004,
+    "lon": 77.29672889000005,
+    "drainage_score": 91,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_247",
+    "risk_score": 15.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.678731633500036,
+    "lon": 77.29059339650007,
+    "drainage_score": 93,
+    "drainage_age": 51
+  },
+  {
+    "ward_id": "DEL_248",
+    "risk_score": 14.95,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.67911780350005,
+    "lon": 77.28037955150006,
+    "drainage_score": 95,
+    "drainage_age": 53
+  },
+  {
+    "ward_id": "DEL_249",
+    "risk_score": 14.35,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.68242786850004,
+    "lon": 77.27113588700004,
+    "drainage_score": 97,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_250",
+    "risk_score": 13.75,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.67431823900003,
+    "lon": 77.26716084200004,
+    "drainage_score": 99,
+    "drainage_age": 57
+  },
+  {
+    "ward_id": "DEL_251",
+    "risk_score": 46.25,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.67822325150007,
+    "lon": 77.25843820050008,
+    "drainage_score": 70,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_252",
+    "risk_score": 41.25,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.689303732500036,
+    "lon": 77.27541635950007,
+    "drainage_score": 72,
+    "drainage_age": 47
+  },
+  {
+    "ward_id": "DEL_253",
+    "risk_score": 36.65,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.69768007350004,
+    "lon": 77.25856396500006,
+    "drainage_score": 74,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_254",
+    "risk_score": 32.050000000000004,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.688153164000056,
+    "lon": 77.25795760250006,
+    "drainage_score": 76,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_255",
+    "risk_score": 27.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69050151550005,
+    "lon": 77.26524293900005,
+    "drainage_score": 78,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_256",
+    "risk_score": 25.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.699874752000056,
+    "lon": 77.27180513250005,
+    "drainage_score": 80,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_257",
+    "risk_score": 21.099999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69452045050005,
+    "lon": 77.27406888700006,
+    "drainage_score": 82,
+    "drainage_age": 37
+  },
+  {
+    "ward_id": "DEL_258",
+    "risk_score": 20.75,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69389378300005,
+    "lon": 77.28429171450006,
+    "drainage_score": 84,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_259",
+    "risk_score": 17.150000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.683984365500063,
+    "lon": 77.27925216600005,
+    "drainage_score": 86,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_260",
+    "risk_score": 16.55,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.686998654000064,
+    "lon": 77.28541011700005,
+    "drainage_score": 88,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_261",
+    "risk_score": 28.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.71335524850005,
+    "lon": 77.28263881450005,
+    "drainage_score": 75,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_262",
+    "risk_score": 26.950000000000003,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.70728502500006,
+    "lon": 77.28881024050006,
+    "drainage_score": 77,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_263",
+    "risk_score": 22.349999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.706634906000065,
+    "lon": 77.30622857400007,
+    "drainage_score": 79,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_264",
+    "risk_score": 22.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.705776097500035,
+    "lon": 77.31859837550004,
+    "drainage_score": 81,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_265",
+    "risk_score": 21.400000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.725763371000056,
+    "lon": 77.27925665800007,
+    "drainage_score": 83,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_266",
+    "risk_score": 17.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.719394334500063,
+    "lon": 77.27201623650006,
+    "drainage_score": 85,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_267",
+    "risk_score": 17.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.708664044000045,
+    "lon": 77.26406614650006,
+    "drainage_score": 87,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_268",
+    "risk_score": 16.599999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.70991656850003,
+    "lon": 77.26973900700006,
+    "drainage_score": 89,
+    "drainage_age": 47
+  },
+  {
+    "ward_id": "DEL_269",
+    "risk_score": 16.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.70796274400004,
+    "lon": 77.26077382050005,
+    "drainage_score": 91,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_270",
+    "risk_score": 15.4,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.71385603400006,
+    "lon": 77.26258392600005,
+    "drainage_score": 93,
+    "drainage_age": 51
+  },
+  {
+    "ward_id": "DEL_271",
+    "risk_score": 14.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.726637753500057,
+    "lon": 77.26758305050004,
+    "drainage_score": 95,
+    "drainage_age": 53
+  },
+  {
+    "ward_id": "DEL_272",
+    "risk_score": 14.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.732074320000063,
+    "lon": 77.25078006300006,
+    "drainage_score": 97,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_001",
+    "risk_score": 78.0,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.844765256000045,
+    "lon": 77.11346808000005,
+    "drainage_score": 55,
+    "drainage_age": 72
+  },
+  {
+    "ward_id": "DEL_002",
+    "risk_score": 83.4,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.852885344500063,
+    "lon": 77.07670003600003,
+    "drainage_score": 52,
+    "drainage_age": 75
+  },
+  {
+    "ward_id": "DEL_003",
+    "risk_score": 72.35,
+    "risk_level": "CRITICAL \ud83d\udd34",
+    "risk_color": "#FF0000",
+    "lat": 28.791734201000057,
+    "lon": 77.10512273150007,
+    "drainage_score": 58,
+    "drainage_age": 68
+  },
+  {
+    "ward_id": "DEL_004",
+    "risk_score": 67.5,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.818902421000047,
+    "lon": 77.16921303500004,
+    "drainage_score": 60,
+    "drainage_age": 65
+  },
+  {
+    "ward_id": "DEL_005",
+    "risk_score": 62.650000000000006,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.76197293300004,
+    "lon": 77.15652433200006,
+    "drainage_score": 62,
+    "drainage_age": 62
+  },
+  {
+    "ward_id": "DEL_006",
+    "risk_score": 57.8,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.74737630500007,
+    "lon": 77.18875139250005,
+    "drainage_score": 64,
+    "drainage_age": 59
+  },
+  {
+    "ward_id": "DEL_007",
+    "risk_score": 52.70000000000001,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.76756720100005,
+    "lon": 77.20195213550005,
+    "drainage_score": 66,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_008",
+    "risk_score": 47.85,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.74385380900003,
+    "lon": 77.21320802600007,
+    "drainage_score": 68,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_009",
+    "risk_score": 43.0,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.67363241200005,
+    "lon": 77.20786754200006,
+    "drainage_score": 70,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_010",
+    "risk_score": 38.150000000000006,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.701381185500058,
+    "lon": 77.21829698250005,
+    "drainage_score": 72,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_011",
+    "risk_score": 33.3,
+    "risk_level": "MEDIUM \ud83d\udfe1",
+    "risk_color": "#FFFF00",
+    "lat": 28.713587780500035,
+    "lon": 77.21559305350004,
+    "drainage_score": 74,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_012",
+    "risk_score": 28.450000000000003,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.699144944500063,
+    "lon": 77.20512318850007,
+    "drainage_score": 76,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_013",
+    "risk_score": 26.85,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.720098870500067,
+    "lon": 77.19606367900005,
+    "drainage_score": 78,
+    "drainage_age": 38
+  },
+  {
+    "ward_id": "DEL_014",
+    "risk_score": 22.25,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.714340254000035,
+    "lon": 77.17403698800007,
+    "drainage_score": 80,
+    "drainage_age": 36
+  },
+  {
+    "ward_id": "DEL_015",
+    "risk_score": 21.9,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.724577638000056,
+    "lon": 77.16149650700007,
+    "drainage_score": 82,
+    "drainage_age": 39
+  },
+  {
+    "ward_id": "DEL_016",
+    "risk_score": 21.299999999999997,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.727268305500047,
+    "lon": 77.16875040300008,
+    "drainage_score": 84,
+    "drainage_age": 41
+  },
+  {
+    "ward_id": "DEL_017",
+    "risk_score": 20.700000000000003,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.737881851000058,
+    "lon": 77.14634641950008,
+    "drainage_score": 86,
+    "drainage_age": 43
+  },
+  {
+    "ward_id": "DEL_018",
+    "risk_score": 17.1,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.757729534500044,
+    "lon": 77.14651710000004,
+    "drainage_score": 88,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_019",
+    "risk_score": 16.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.743285249500076,
+    "lon": 77.16129887750006,
+    "drainage_score": 90,
+    "drainage_age": 47
+  },
+  {
+    "ward_id": "DEL_020",
+    "risk_score": 15.899999999999999,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.73239629950004,
+    "lon": 77.16807217500005,
+    "drainage_score": 92,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_021",
+    "risk_score": 15.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.732450941500048,
+    "lon": 77.11532759300005,
+    "drainage_score": 94,
+    "drainage_age": 51
+  },
+  {
+    "ward_id": "DEL_022",
+    "risk_score": 14.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.716766724500047,
+    "lon": 77.10760208150006,
+    "drainage_score": 96,
+    "drainage_age": 53
+  },
+  {
+    "ward_id": "DEL_023",
+    "risk_score": 14.100000000000001,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.71562059550007,
+    "lon": 77.08692286350004,
+    "drainage_score": 98,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_024",
+    "risk_score": 13.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.708892069500052,
+    "lon": 77.09403302900006,
+    "drainage_score": 100,
+    "drainage_age": 57
+  },
+  {
+    "ward_id": "DEL_025",
+    "risk_score": 21.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.71854580750005,
+    "lon": 77.07399161500004,
+    "drainage_score": 85,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_026",
+    "risk_score": 17.599999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.745611759500065,
+    "lon": 77.10033920250007,
+    "drainage_score": 87,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_027",
+    "risk_score": 17.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.756514748500052,
+    "lon": 77.01401559550007,
+    "drainage_score": 89,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_028",
+    "risk_score": 16.400000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.808736115000045,
+    "lon": 77.00657305300007,
+    "drainage_score": 91,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_029",
+    "risk_score": 15.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.738469518000045,
+    "lon": 77.00174011650006,
+    "drainage_score": 93,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_030",
+    "risk_score": 15.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.68841292700006,
+    "lon": 76.99703743650005,
+    "drainage_score": 95,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_031",
+    "risk_score": 14.6,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.682999255000055,
+    "lon": 77.04872200600005,
+    "drainage_score": 97,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_032",
+    "risk_score": 14.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.668871240000044,
+    "lon": 77.05521682550005,
+    "drainage_score": 99,
+    "drainage_age": 58
+  },
+  {
+    "ward_id": "DEL_033",
+    "risk_score": 25.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.706390841500053,
+    "lon": 77.05830253850004,
+    "drainage_score": 80,
+    "drainage_age": 40
+  },
+  {
+    "ward_id": "DEL_034",
+    "risk_score": 22.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.70460507000007,
+    "lon": 77.03709331500008,
+    "drainage_score": 82,
+    "drainage_age": 42
+  },
+  {
+    "ward_id": "DEL_035",
+    "risk_score": 21.599999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.697285730500028,
+    "lon": 77.05735930750004,
+    "drainage_score": 84,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_036",
+    "risk_score": 18.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.691466878000057,
+    "lon": 77.04940023450004,
+    "drainage_score": 86,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_037",
+    "risk_score": 17.400000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69736105350006,
+    "lon": 77.07918836900006,
+    "drainage_score": 88,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_038",
+    "risk_score": 16.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.700091447000062,
+    "lon": 77.08697676250006,
+    "drainage_score": 90,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_039",
+    "risk_score": 16.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.697597383000044,
+    "lon": 77.07352449100006,
+    "drainage_score": 92,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_040",
+    "risk_score": 15.6,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.688819153500077,
+    "lon": 77.07011987650006,
+    "drainage_score": 94,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_041",
+    "risk_score": 15.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.66629401250006,
+    "lon": 77.08493309550005,
+    "drainage_score": 96,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_042",
+    "risk_score": 14.4,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.67906270450004,
+    "lon": 77.08551250850007,
+    "drainage_score": 98,
+    "drainage_age": 58
+  },
+  {
+    "ward_id": "DEL_043",
+    "risk_score": 13.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.673568869500016,
+    "lon": 77.06384065250003,
+    "drainage_score": 100,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_044",
+    "risk_score": 21.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.657066744000048,
+    "lon": 77.06361607350004,
+    "drainage_score": 85,
+    "drainage_age": 45
+  },
+  {
+    "ward_id": "DEL_045",
+    "risk_score": 20.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.702699175500044,
+    "lon": 77.10851836300006,
+    "drainage_score": 87,
+    "drainage_age": 47
+  },
+  {
+    "ward_id": "DEL_046",
+    "risk_score": 17.099999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69005622350005,
+    "lon": 77.09691662100005,
+    "drainage_score": 89,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_047",
+    "risk_score": 16.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.697357153500036,
+    "lon": 77.09149079700003,
+    "drainage_score": 91,
+    "drainage_age": 51
+  },
+  {
+    "ward_id": "DEL_048",
+    "risk_score": 15.9,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.690087764000054,
+    "lon": 77.08373833600007,
+    "drainage_score": 93,
+    "drainage_age": 53
+  },
+  {
+    "ward_id": "DEL_049",
+    "risk_score": 15.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.735002518500067,
+    "lon": 77.13329839050004,
+    "drainage_score": 95,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_050",
+    "risk_score": 14.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.720213227500068,
+    "lon": 77.12435117000007,
+    "drainage_score": 97,
+    "drainage_age": 57
+  },
+  {
+    "ward_id": "DEL_051",
+    "risk_score": 14.1,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.709128334500065,
+    "lon": 77.12798485550005,
+    "drainage_score": 99,
+    "drainage_age": 59
+  },
+  {
+    "ward_id": "DEL_052",
+    "risk_score": 13.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.71090526450007,
+    "lon": 77.11743863400008,
+    "drainage_score": 101,
+    "drainage_age": 61
+  },
+  {
+    "ward_id": "DEL_053",
+    "risk_score": 20.400000000000002,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.701308553000032,
+    "lon": 77.14407817350008,
+    "drainage_score": 88,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_054",
+    "risk_score": 16.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.71774317750007,
+    "lon": 77.14407817350008,
+    "drainage_score": 90,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_055",
+    "risk_score": 16.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.718578615500036,
+    "lon": 77.15431447650008,
+    "drainage_score": 92,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_056",
+    "risk_score": 15.6,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.70964052900004,
+    "lon": 77.16195464800003,
+    "drainage_score": 94,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_057",
+    "risk_score": 15.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.666987539000047,
+    "lon": 77.10273321300005,
+    "drainage_score": 96,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_058",
+    "risk_score": 14.4,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.675965282500073,
+    "lon": 77.10450289350007,
+    "drainage_score": 98,
+    "drainage_age": 58
+  },
+  {
+    "ward_id": "DEL_059",
+    "risk_score": 13.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.682857156500035,
+    "lon": 77.12689789350006,
+    "drainage_score": 100,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_060",
+    "risk_score": 13.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69125380250003,
+    "lon": 77.11308180500004,
+    "drainage_score": 102,
+    "drainage_age": 62
+  },
+  {
+    "ward_id": "DEL_061",
+    "risk_score": 17.099999999999998,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.677915995000063,
+    "lon": 77.16141565850006,
+    "drainage_score": 89,
+    "drainage_age": 49
+  },
+  {
+    "ward_id": "DEL_062",
+    "risk_score": 16.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.680788372500047,
+    "lon": 77.14604548400004,
+    "drainage_score": 91,
+    "drainage_age": 51
+  },
+  {
+    "ward_id": "DEL_063",
+    "risk_score": 15.9,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69368080200005,
+    "lon": 77.13611460850007,
+    "drainage_score": 93,
+    "drainage_age": 53
+  },
+  {
+    "ward_id": "DEL_064",
+    "risk_score": 15.3,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.690359588000064,
+    "lon": 77.14782863950006,
+    "drainage_score": 95,
+    "drainage_age": 55
+  },
+  {
+    "ward_id": "DEL_065",
+    "risk_score": 14.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.682057468500066,
+    "lon": 77.17353842300005,
+    "drainage_score": 97,
+    "drainage_age": 57
+  },
+  {
+    "ward_id": "DEL_066",
+    "risk_score": 14.1,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69199426250003,
+    "lon": 77.17957061050004,
+    "drainage_score": 99,
+    "drainage_age": 59
+  },
+  {
+    "ward_id": "DEL_067",
+    "risk_score": 13.5,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.689212780000048,
+    "lon": 77.16483823950006,
+    "drainage_score": 101,
+    "drainage_age": 61
+  },
+  {
+    "ward_id": "DEL_068",
+    "risk_score": 12.9,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.697620804500076,
+    "lon": 77.16668876900007,
+    "drainage_score": 103,
+    "drainage_age": 63
+  },
+  {
+    "ward_id": "DEL_069",
+    "risk_score": 20.8,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.677037136000052,
+    "lon": 77.19425806500007,
+    "drainage_score": 86,
+    "drainage_age": 44
+  },
+  {
+    "ward_id": "DEL_070",
+    "risk_score": 17.2,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.688527435000022,
+    "lon": 77.19438382950005,
+    "drainage_score": 88,
+    "drainage_age": 46
+  },
+  {
+    "ward_id": "DEL_071",
+    "risk_score": 16.6,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.69841666000005,
+    "lon": 77.18381964200006,
+    "drainage_score": 90,
+    "drainage_age": 48
+  },
+  {
+    "ward_id": "DEL_072",
+    "risk_score": 16.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.70116650500003,
+    "lon": 77.19122175950008,
+    "drainage_score": 92,
+    "drainage_age": 50
+  },
+  {
+    "ward_id": "DEL_073",
+    "risk_score": 15.4,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.67380589700005,
+    "lon": 77.18098545700005,
+    "drainage_score": 94,
+    "drainage_age": 52
+  },
+  {
+    "ward_id": "DEL_074",
+    "risk_score": 14.799999999999999,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.66518275550007,
+    "lon": 77.17426156700003,
+    "drainage_score": 96,
+    "drainage_age": 54
+  },
+  {
+    "ward_id": "DEL_075",
+    "risk_score": 14.200000000000001,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.667204899500064,
+    "lon": 77.19448264400006,
+    "drainage_score": 98,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_076",
+    "risk_score": 13.6,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.663685465000043,
+    "lon": 77.20752169050007,
+    "drainage_score": 100,
+    "drainage_age": 58
+  },
+  {
+    "ward_id": "DEL_077",
+    "risk_score": 13.0,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.676169215000073,
+    "lon": 77.23073864900007,
+    "drainage_score": 102,
+    "drainage_age": 60
+  },
+  {
+    "ward_id": "DEL_078",
+    "risk_score": 12.4,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.683482030500073,
+    "lon": 77.21922224700006,
+    "drainage_score": 104,
+    "drainage_age": 62
+  },
+  {
+    "ward_id": "DEL_079",
+    "risk_score": 50.900000000000006,
+    "risk_level": "HIGH \ud83d\udfe0",
+    "risk_color": "#FFA500",
+    "lat": 28.649992912000044,
+    "lon": 77.23521225900006,
+    "drainage_score": 64,
+    "drainage_age": 56
+  },
+  {
+    "ward_id": "DEL_UNKNOWN",
+    "risk_score": 28.7,
+    "risk_level": "LOW \ud83d\udfe2",
+    "risk_color": "#00FF00",
+    "lat": 28.65124456300003,
+    "lon": 77.27325142000007,
+    "drainage_score": 75,
+    "drainage_age": 40
+  }
+]

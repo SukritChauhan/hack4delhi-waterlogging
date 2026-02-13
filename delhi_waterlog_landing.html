@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Water-logging Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+        
+        /* Marquee for Alerts */
+        .alert-marquee {
+            background: linear-gradient(90deg, #dc2626, #f59e0b, #10b981);
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            font-weight: 500;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+            padding-left: 100%;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* Top Navigation Bar */
+        .top-nav {
+            background: #1e3a8a;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .gov-branding {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .emblem {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 1.5rem;
+        }
+        
+        .gov-text {
+            line-height: 1.3;
+        }
+        
+        .gov-text .main {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .gov-text .sub {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .hero-btn.primary {
+            background: white;
+            color: #1e3a8a;
+        }
+        
+        .hero-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+        }
+        
+        .hero-btn.secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .hero-btn.secondary:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        /* Info Section */
+        .info-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: #1e293b;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Feature Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #1e3a8a;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+        
+        /* Portal Cards */
+        .portals-section {
+            margin: 4rem 0;
+        }
+        
+        .portals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portal-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .portal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        
+        .portal-header {
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .portal-header.authority {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+        
+        .portal-header.citizen {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: white;
+        }
+        
+        .portal-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .portal-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .portal-header p {
+            opacity: 0.95;
+            font-size: 0.95rem;
+        }
+        
+        .portal-body {
+            padding: 2rem;
+        }
+        
+        .portal-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .portal-features li {
+            padding: 0.5rem 0;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .portal-features li:before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .portal-btn {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .portal-btn.authority {
+            background: #1e3a8a;
+            color: white;
+        }
+        
+        .portal-btn.authority:hover {
+            background: #1e40af;
+        }
+        
+        .portal-btn.citizen {
+            background: #059669;
+            color: white;
+        }
+        
+        .portal-btn.citizen:hover {
+            background: #047857;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .portals-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .marquee-content {
+                animation: marquee 15s linear infinite;
+            }
+        }
+
+        /* ===== DARK THEME STYLES (SAME AS DASHBOARD) ===== */
+[data-theme="dark"] {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #141b2b;
+    --bg-card: #1a1f2e;
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --text-muted: #cbd5e1;
+    --border-color: #2a3346;
+    --nav-bg: #0a1a2f;
+    --card-bg: #1a1f2e;
+    --hover-bg: #2d3748;
+    --hero-start: #0a1a2f;
+    --hero-end: #1e3a8a;
+    --authority-start: #0a1a2f;
+    --authority-end: #1e3a8a;
+    --citizen-start: #065f46;
+    --citizen-end: #059669;
+    --stat-number: #60a5fa;
+    --footer-link: #60a5fa;
+}
+
+/* Apply dark theme variables */
+[data-theme="dark"] body {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .top-nav {
+    background: var(--nav-bg);
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, var(--hero-start) 0%, var(--hero-end) 100%);
+}
+
+[data-theme="dark"] .feature-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-left-color: #3b82f6;
+}
+
+[data-theme="dark"] .feature-card h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .feature-card p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .portal-card {
+    background: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .portal-header.authority {
+    background: linear-gradient(135deg, var(--authority-start) 0%, var(--authority-end) 100%);
+}
+
+[data-theme="dark"] .portal-header.citizen {
+    background: linear-gradient(135deg, var(--citizen-start) 0%, var(--citizen-end) 100%);
+}
+
+[data-theme="dark"] .portal-body {
+    background: var(--card-bg);
+}
+
+[data-theme="dark"] .portal-features li {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .portal-features li:before {
+    color: #10b981;
+}
+
+[data-theme="dark"] .stats-section {
+    background: var(--card-bg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .stat-number {
+    color: var(--stat-number);
+}
+
+[data-theme="dark"] .stat-label {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .section-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .section-subtitle {
+    color: var(--text-muted);
+}
+
+[data-theme="dark"] .footer {
+    background: var(--card-bg);
+    border-top-color: var(--border-color);
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .footer-links a {
+    color: var(--footer-link);
+}
+
+[data-theme="dark"] .alert-marquee {
+    background: linear-gradient(90deg, #991b1b, #b45309, #065f46);
+}
+
+/* Smooth transitions */
+body, .top-nav, .hero, .feature-card, .portal-card, 
+.portal-header, .portal-body, .stats-section, .footer,
+.section-title, .section-subtitle, .feature-card h3, 
+.feature-card p, .portal-features li, .stat-number, 
+.stat-label, .footer-links a, .alert-marquee {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+    </style>
+</head>
+<body>
+    <!-- Alert Marquee -->
+    <div class="alert-marquee">
+        <div class="marquee-content">
+            ⚠️ High Risk Alert: Ward 32 (Kanjhawala) - Drainage system overwhelmed | 
+            📊 Live Update: 247 complaints received today | 
+            🌧️ IMD Warning: Heavy rainfall expected in North Delhi | 
+            ✅ Action Taken: 85% complaints resolved this week | 
+            🚨 Emergency: Water-logging reported in Minto Bridge area
+        </div>
+    </div>
+    
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="gov-branding">
+            <div class="emblem">🇮🇳</div>
+            <div class="gov-text">
+                <div class="main">Government of NCT of Delhi</div>
+                <div class="sub">Municipal Corporation of Delhi</div>
+            </div>
+        </div>
+        <div class="nav-actions">
+            <button class="nav-btn" onclick="scrollToSection('about')">About</button>
+            <button class="nav-btn" onclick="scrollToSection('portals')">Portals</button>
+            <button class="nav-btn" onclick="scrollToSection('stats')">Statistics</button>
+            <button class="nav-btn" id="theme-toggle" onclick="toggleTheme()">
+            <span id="theme-icon">🌙</span> Dark Mode
+            </button>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Delhi Water-logging Risk Management System</h1>
+            <p>Proactive Flood Preparedness Through GIS-Based Hotspot Mapping & Data Intelligence</p>
+            <div class="hero-buttons">
+                <a href="delhi_waterlog_login.html" class="hero-btn primary">🔐 Authority Login</a>
+                <a href="delhi_waterlog_complaint.html" class="hero-btn secondary">📝 File Complaint</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- About Section -->
+        <div class="info-section" id="about">
+            <h2 class="section-title">About the System</h2>
+            <p class="section-subtitle">A comprehensive GIS-enabled platform for predictive water-logging management across Delhi</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Ward-Level Mapping</h3>
+                    <p>Interactive GIS-based visualization identifying chronic water-logging hotspots at ward level, enabling targeted interventions and efficient resource allocation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Integrated Data Analytics</h3>
+                    <p>Seamlessly integrates historical rainfall data, citizen complaints, and drainage infrastructure information for comprehensive risk assessment.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚠️</div>
+                    <h3>Risk Classification</h3>
+                    <p>Categorizes wards into Red (High), Yellow (Medium), and Green (Low) risk zones based on data-driven analysis, enabling prioritized response strategies.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Early Warning System</h3>
+                    <p>Real-time alerts and weather monitoring to enable proactive preparedness before monsoon events occur.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Proactive Governance</h3>
+                    <p>Shifts response from reactive post-flood measures to pre-monsoon planning and preventive maintenance scheduling.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Performance Tracking</h3>
+                    <p>Monitor intervention effectiveness, track complaint resolution, and measure improvement in flood-prone areas over time.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="stats-section" id="stats">
+            <h2 class="section-title">System Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">250</div>
+                    <div class="stat-label">Wards Monitored</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">42</div>
+                    <div class="stat-label">Active Hotspots</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2,247</div>
+                    <div class="stat-label">Complaints Analyzed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Prediction Accuracy</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portals Section -->
+        <div class="portals-section" id="portals">
+            <h2 class="section-title">Access Portals</h2>
+            <p class="section-subtitle">Choose your portal to access the system</p>
+            
+            <div class="portals-grid">
+                <!-- Authority Portal -->
+                <div class="portal-card">
+                    <div class="portal-header authority">
+                        <div class="portal-icon">👨‍💼</div>
+                        <h3>Authority Dashboard</h3>
+                        <p>For MCD Officials & Emergency Response Teams</p>
+                    </div>
+                    <div class="portal-body">
+                        <ul class="portal-features">
+                            <li>Access ward-level risk maps and analytics</li>
+                            <li>View historical data and complaint records</li>
+                            <li>Generate reports and action plans</li>
+                            <li>Monitor real-time weather alerts</li>
+                            <li>Track resource deployment and response</li>
+                            <li>Export data for planning and analysis</li>
+                        </ul>
+                        <a href="delhi_waterlog_login.html" class="portal-btn authority">Login to Dashboard</a>
+                    </div>
+                </div>
+                
+                <!-- Citizen Portal -->
+                <div class="portal-card">
+                    <div class="portal-header citizen">
+                        <div class="portal-icon">👥</div>
+                        <h3>Citizen Complaint Portal</h3>
+                        <p>For Delhi Residents & Citizens</p>
+                    </div>
+                    <div class="portal-body">
+                        <ul class="portal-features">
+                            <li>Report water-logging incidents in your area</li>
+                            <li>Upload photos and location details</li>
+                            <li>Track complaint status and resolution</li>
+                            <li>View hotspot areas near you</li>
+                            <li>Receive monsoon preparedness alerts</li>
+                            <li>Contribute to community safety</li>
+                        </ul>
+                        <a href="delhi_waterlog_complaint.html" class="portal-btn citizen">File a Complaint</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Help & Support</a>
+                <a href="#">Data Sources</a>
+            </div>
+            <p>&copy; 2025 Municipal Corporation of Delhi. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">Data Sources: India Meteorological Department (IMD), Data.gov.in, MCD Records</p>
+        </div>
+    </div>
+    
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Theme Toggle Function (Same as Dashboard)
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const themeIcon = document.getElementById('theme-icon');
+    const themeBtn = document.getElementById('theme-toggle');
+    
+    if (currentTheme === 'dark') {
+        // Switch to light theme
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('landing_theme', 'light');
+        themeIcon.textContent = '🌙';
+        themeBtn.innerHTML = '<span id="theme-icon">🌙</span> Theme';
+    } else {
+        // Switch to dark theme
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('landing_theme', 'dark');
+        themeIcon.textContent = '☀️';
+        themeBtn.innerHTML = '<span id="theme-icon">☀️</span> Theme';
+    }
+}
+
+// Load saved theme on page load
+function loadTheme() {
+    const savedTheme = localStorage.getItem('landing_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    const themeIcon = document.getElementById('theme-icon');
+    const themeBtn = document.getElementById('theme-toggle');
+    
+    if (themeIcon && themeBtn) {
+        if (savedTheme === 'dark') {
+            themeIcon.textContent = '☀️';
+            themeBtn.innerHTML = '<span id="theme-icon">☀️</span> Theme';
+        } else {
+            themeIcon.textContent = '🌙';
+            themeBtn.innerHTML = '<span id="theme-icon">🌙</span> Theme';
+        }
+    }
+}
+
+// Call loadTheme when page loads
+document.addEventListener('DOMContentLoaded', loadTheme); 
+
+    </script>
+</body>
+</html>
+
